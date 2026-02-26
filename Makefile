@@ -503,6 +503,11 @@ LDFLAGS_vmlinux =
 LDFLAGS_vmlinux = --strip-debug
 KBUILD_LDFLAGS  += --strip-debug
 
+
+# Optimize for G99 CPU
+KBUILD_CFLAGS += -march=armv8.2-a+crypto
+KBUILD_CFLAGS += -mcpu=cortex-a55
+
 # Use USERINCLUDE when you must reference the UAPI directories only.
 USERINCLUDE    := \
 		-I$(srctree)/arch/$(SRCARCH)/include/uapi \
