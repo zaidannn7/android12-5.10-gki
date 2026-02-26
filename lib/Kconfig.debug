@@ -310,7 +310,7 @@ config FRAME_WARN
 
 config STRIP_ASM_SYMS
 	bool "Strip assembler-generated symbols during link"
-	default n
+	default y
 	help
 	  Strip internal assembler-generated symbols during a link (symbols
 	  that look like '.Lxxx') so they don't pollute the output of
